@@ -3,7 +3,7 @@ from flask import current_app
 from app import create_app
 import os
 
-class AppTestCase(unittest.TestCase):
+class AtributeTestCase(unittest.TestCase):
 
     def setUp(self):
         os.environ['FLASK_CONTEXT'] = 'testing'
