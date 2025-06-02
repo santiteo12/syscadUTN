@@ -1,9 +1,10 @@
 import unittest
 from flask import current_app
 from app import create_app
+from app.models.facultad import Facultad
 import os
 
-class AtributeTestCase(unittest.TestCase):
+class AppTestCase(unittest.TestCase):
 
     def setUp(self):
         os.environ['FLASK_CONTEXT'] = 'testing'
@@ -14,8 +15,8 @@ class AtributeTestCase(unittest.TestCase):
     def tearDown(self):
         self.app_context.pop()
 
-    def test_app(self):
-        self.assertIsNotNone(current_app)
+    def test_facultad(self):
+        facultad = Facultad()
 
 if __name__ == '__main__':
     unittest.main()

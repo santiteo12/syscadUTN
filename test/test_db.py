@@ -1,7 +1,8 @@
 import os
 import unittest
 from sqlalchemy import text
-from app import create_app, db
+from app import create_app
+from app import db 
 
 
 class ConnectionTestCase(unittest.TestCase):
